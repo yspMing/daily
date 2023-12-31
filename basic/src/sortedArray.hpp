@@ -78,7 +78,7 @@ int find_in_left(int* nums, int target,int left, int right)
     int start = (left + right) / 2;
     while (start<right)
     {
-        if (nums[start] == target and nums[start - 1] != target)
+        if (nums[start] == target && nums[start - 1] != target)
         {
             break;
         }
@@ -100,7 +100,7 @@ int find_in_right(int* nums, int target, int left, int right)
     int end = (left + right) / 2;
     while (end>left)
     {
-        if (nums[end] == target and nums[end + 1] != target)
+        if (nums[end] == target && nums[end + 1] != target)
         {
             break;
         }

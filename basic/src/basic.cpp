@@ -12,7 +12,7 @@
 #include "threadCycle.hpp"
 
 
-int RUN_BASIC()
+void RUN_BASIC()
 {
 	/*
 	Solution solver;
@@ -46,5 +46,5 @@ int RUN_BASIC()
 
 	mainThreadCycleFun();
 	
-	return 0;
+	return;
 }

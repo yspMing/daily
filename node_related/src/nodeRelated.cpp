@@ -3,7 +3,7 @@
 #include "reverseKList.hpp"
 #include "reverseWithGPT.hpp"
 
-int RUN_NODE_RELATED()
+void RUN_NODE_RELATED()
 {
 	/*
 	Solution solver;
@@ -35,5 +35,5 @@ int RUN_NODE_RELATED()
 
 	mainGPT();
 	
-	return 0;
+	return;
 }
