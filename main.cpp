@@ -5,16 +5,16 @@
 
 int main()
 {
-    std::cout<<"hello world"<<std::endl;
-    APPLE_MAKE();
-    APPLE_EAT();
-
+    std::cout << "****************RUN_BASIC***************" << std::endl;
     RUN_BASIC();
 
+    std::cout << "****************RUN_SMART_POINTER***************" << std::endl;
     runSmartPointer();
 
+    std::cout << "****************RUN_CLASSHEIR***************" << std::endl;
     runClassHeir();
 
+    std::cout << "****************RUN_SMART_NODE_RELATED***************" << std::endl;
     RUN_NODE_RELATED();
 
     return 0;
