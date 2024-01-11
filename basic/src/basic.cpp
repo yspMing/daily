@@ -38,11 +38,9 @@ void RUN_BASIC()
 	cout<<"addr: "<<g.getNumTurnsAddress();
 	*/
 
-	//testKMergedLists();
+	//test_sorted_array();
 
-	//testReverseKlist();
-
-	//mainGPT();
+	//mainThreadCycleFun();
 
 	mainThreadCycleFun();
 	

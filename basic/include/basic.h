@@ -7,4 +7,6 @@ void runSmartPointer();
 
 void runClassHeir();
 
+void runFileInOut();
+
 #endif

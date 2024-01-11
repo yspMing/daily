@@ -17,5 +17,8 @@ int main()
     std::cout << "****************RUN_SMART_NODE_RELATED***************" << std::endl;
     RUN_NODE_RELATED();
 
+    std::cout << "****************RUN_FILE_IN_OUT***************" << std::endl;
+    runFileInOut();
+
     return 0;
 }

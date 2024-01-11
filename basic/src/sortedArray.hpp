@@ -84,7 +84,13 @@ int find_in_left(int* nums, int target,int left, int right)
         }
         else if (nums[start] < target)
         {
+            left = start;
             start = (start + right) / 2;
+        }
+        else if (nums[start] > target)
+        {
+            right = start;
+            start = (start + left) / 2;
         }
         else
         {
@@ -106,7 +112,13 @@ int find_in_right(int* nums, int target, int left, int right)
         }
         else if (nums[end] > target)
         {
+            right = end;
             end = (end + left) / 2;
+        }
+        else if (nums[end] < target)
+        {
+            left = end;
+            end = (end + right) / 2;
         }
         else
         {
@@ -137,10 +149,24 @@ int* find_first_and_last_position_of_element_in_sorted_array(int* nums, int nums
         return ret;
     }
 
-    int left = 0;
-    int right = numsSize - 1;
-    int middle;
+    ret[0] = find_in_left(nums, target, 0, numsSize - 1);
+    ret[1] = find_in_right(nums, target, 0, numsSize - 1);
 
     return ret;
     
+}
+
+void test_sorted_array()
+{
+    int arr[6] = { 5, 7, 7, 8, 8, 10 };
+
+    std::cout << "sorted array: ";
+    for (int i = 0; i < 6; i++) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << "\n";
+    int ans_size;
+    int* ans = find_first_and_last_position_of_element_in_sorted_array(arr, 6, 7, &ans_size);
+    std::cout << "target " << 7 << " in [ " << ans[0] << ", " << ans[1] << " ]" << std::endl;
+
 }
