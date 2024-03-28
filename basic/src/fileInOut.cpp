@@ -4,7 +4,10 @@
 int runFgets()
 {
 	char* ptr = "Linux";
-	printf("size of ptr: %d", sizeof(ptr));
+	printf("size of ptr: %d\n", sizeof(ptr));
+
+	//About fgets buffer leak problem
+	//see https://zhuanlan.zhihu.com/p/522935497
 	char a[10] = { 0 };
 	printf("Test fgets function, input a string(longest length 9): ");
 	fgets(a, 10, stdin);
@@ -16,7 +19,20 @@ int runFgets()
 	return 0;
 }
 
+int var_ele(long n, int A[][10], long i, long j)
+{
+	return A[i][j];
+}
+
+int runScanf()
+{
+	const int wordCount = 10;
+	char myChar[wordCount];
+	return 0;
+}
+
 void runFileInOut()
 {
-	runFgets();
+	printf("=======>runFetgs()\n");
+	//runFgets();
 }

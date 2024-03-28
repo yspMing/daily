@@ -1,5 +1,0 @@
-PROJECT (APPLE)
-MESSAGE(STATUS "This is apple module source dir:" ${PROJECT_SOURCE_DIR})
-MESSAGE(STATUS "This is apple module binary dir:" ${PROJECT_BINARY_DIR})
-SET (APPLE_SRC_LIST src/apple.cpp)
-ADD_LIBRARY(apple_module ${APPLE_SRC_LIST})
