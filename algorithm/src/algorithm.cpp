@@ -7,6 +7,7 @@
 #include "singleBridge.hpp"
 #include "maxBitString.hpp"
 #include "fishTravel.hpp"
+#include "numIsLands.hpp"
 
 
 void RUN_ALGORITHM()
@@ -27,7 +28,10 @@ void RUN_ALGORITHM()
 
 	//runMaxBitString();
 
-	runMiniFishSpan();
+	//runMiniFishSpan();
+
+	runNumIslands();
+
 
 	return;
 }
