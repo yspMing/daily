@@ -1,6 +1,8 @@
-#pragma once
+#include <iostream>
 
-char* maxBitString(int n, char* str)
+namespace algorithm{
+
+static char* maxBitString(int n, char* str)
 {
     if (n < 2)
     {
@@ -34,4 +36,6 @@ void runMaxBitString()
     char input[5] = "0010";
     char* str = maxBitString(4, input);
     std::cout << str;
+}
+
 }

@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+namespace basic{
+
 struct size_node{
 	int a;
 	int c;
@@ -11,4 +13,6 @@ int run_sizeof_test()
 {
 	printf("sizeof node:%ld\n",sizeof(size_node));
 	return 0;
+}
+
 }

@@ -1,5 +1,3 @@
-#pragma once
-
 #include <thread>
 #include <iostream>
 #include <cstdio>
@@ -7,6 +5,8 @@
 #include <condition_variable>
 #include <stdexcept>
 #include <deque>
+
+namespace algorithm{
 
 #ifdef WIN32
 #include <Windows.h>
@@ -165,7 +165,7 @@ void dequeFunc1()
         std::unique_lock<std::mutex> locker(mu);
         std::cout << "thread1 push value : " << count << std::endl;
         q.push_front(count++);
-        locker.unlock();//Èç¹ûÊÇlock_guard£¬²»Ö§³ÖÊÖ¶¯½âËø
+        locker.unlock();//ï¿½ï¿½ï¿½ï¿½ï¿½lock_guardï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½ï¿½
         cond.notify_one();
 #ifdef WIN32
         Sleep(1);
@@ -194,4 +194,6 @@ void runDequeThread()
     std::thread t2(dequeFunc2);
     t1.join();
     t2.join();
+}
+
 }

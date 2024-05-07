@@ -1,18 +1,21 @@
-#pragma once
-
 #ifdef __linux__
 
 #include <sys/types.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
+#include <string.h>
 
-void unix_error(const char* msg)
+namespace basic{
+
+static void unix_error(const char* msg)
 {
     fprintf(stderr, "%s : %s\n", msg, strerror(errno));
     exit(0);
 }
 
-pid_t Fork(void)
+static pid_t Fork(void)
 {
     pid_t pid;
 
@@ -46,6 +49,8 @@ void runFork()
     //parent
     //printf("parent: x = %d\n", --x);
     //exit(0);
+}
+
 }
 
 #endif

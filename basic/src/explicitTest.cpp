@@ -1,6 +1,7 @@
-#pragma once
 #include <stdlib.h>
 #include <cstring>
+
+namespace basic{
 
 class CxString  // û��ʹ��explicit�ؼ��ֵ�������, ��Ĭ��Ϊ��ʽ����  
 {
@@ -38,3 +39,4 @@ void explicitTest()
     //string3 = string1;        // ����Ҳ��OK��, ���ٱ�����û�����, �������������������
 }
 
+}

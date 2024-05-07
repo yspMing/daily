@@ -1,12 +1,12 @@
-#pragma once
-
-#include<iostream>
-#include<queue>
-#include<vector>
-#include"common.hpp"
+#include <iostream>
+#include <queue>
+#include <vector>
+#include "common.hpp"
 
 using std::priority_queue;
 using std::vector;
+
+namespace node_related{
 
 class mergeKSortedList
 {
@@ -126,4 +126,6 @@ void testKMergedLists()
 		delete ans;
 		ans = tmp;
 	}
+}
+
 }

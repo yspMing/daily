@@ -1,5 +1,6 @@
-#pragma once
 #include "common.hpp"
+
+namespace node_related{
 
 void DeleteNode(listNode **pListHead, listNode* pToBeDeleted)
 {
@@ -28,4 +29,6 @@ void DeleteNode(listNode **pListHead, listNode* pToBeDeleted)
         *pListHead = nullptr;
         pToBeDeleted = nullptr;
     }
+}
+
 }

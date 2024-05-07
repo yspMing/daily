@@ -1,6 +1,6 @@
-#pragma once
-
 #include "common.hpp"
+
+namespace node_related{
 
 class reverseKlist
 {
@@ -60,4 +60,6 @@ void testReverseKlist()
 	printLinkedList(Head);
 
 	destroyLinkedList(Head);
+}
+
 }

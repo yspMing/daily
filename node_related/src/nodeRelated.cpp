@@ -1,10 +1,8 @@
-#include "mergeKSortedList.hpp"
-#include "deleteNode.hpp"
-#include "reverseKList.hpp"
-#include "reverseWithGPT.hpp"
+#include "inner.h"
 
 void RUN_NODE_RELATED()
 {
+	using namespace node_related;
 	/*
 	Solution solver;
 	int ans = solver.findPaths(2, 2, 2, 0, 0);

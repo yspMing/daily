@@ -7,6 +7,8 @@ using std::shared_ptr;
 using std::make_shared;
 using std::string;
 
+namespace basic{
+
 struct Item
 {
     int val = 1234;
@@ -115,4 +117,6 @@ void runSmartPointer()
 	}
 	std::cout<<"b1->front: "<<b1.front()<<std::endl;
 	std::cout<<"b1->back: "<<b1.back()<<std::endl;
+}
+
 }

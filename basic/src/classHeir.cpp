@@ -14,7 +14,7 @@ public:
 	virtual void func(int val = 0) { std::cout << "B->" << val << std::endl; }
 };
 */
-
+namespace basic{
 
 class Base
 {
@@ -68,4 +68,6 @@ void runClassHeir()
 	void* __vfptr1 = (void*)((int64_t*)__vfptr)[1];
 	std::cout << "__vfptr0 adrr: " << __vfptr0 << "\n";
 	std::cout << "__vfptr0 addr: " << __vfptr1 << "\n";
+}
+
 }

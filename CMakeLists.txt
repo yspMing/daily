@@ -1,20 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
-PROJECT (HELLO)
-SET (SRC_LIST main.cpp)
+PROJECT (DAILY)
 MESSAGE(STATUS "This is poject source dir:" ${PROJECT_SOURCE_DIR})
 MESSAGE(STATUS "This is poject binary dir:" ${PROJECT_BINARY_DIR})
 
 ADD_SUBDIRECTORY(basic)
 ADD_SUBDIRECTORY(algorithm)
 ADD_SUBDIRECTORY(node_related)
-
-ADD_EXECUTABLE(hello ${SRC_LIST})
-
-TARGET_INCLUDE_DIRECTORIES(hello PRIVATE ${PROJECT_SOURCE_DIR}/basic/include)
-TARGET_INCLUDE_DIRECTORIES(hello PRIVATE ${PROJECT_SOURCE_DIR}/algorithm/include)
-TARGET_INCLUDE_DIRECTORIES(hello PRIVATE ${PROJECT_SOURCE_DIR}/node_related/include)
-
-TARGET_LINK_LIBRARIES(hello PRIVATE basic_module)
-TARGET_LINK_LIBRARIES(hello PRIVATE algorithm_module)
-TARGET_LINK_LIBRARIES(hello PRIVATE node_related_module)
-
+ADD_SUBDIRECTORY(examples)

@@ -1,6 +1,7 @@
-#pragma once
-
 #include <stdio.h>
+
+namespace basic{
+
 typedef enum {
 	N_LEAF, 
 	N_INTERNAL
@@ -23,7 +24,7 @@ struct node_t{
 	}info;
 };
 
-void multiArrayFunc1(int n, char str[][5])
+static void multiArrayFunc1(int n, char str[][5])
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -33,7 +34,7 @@ void multiArrayFunc1(int n, char str[][5])
 }
 
 
-void multiArrayFunc2(int n, char (*str)[5])
+static void multiArrayFunc2(int n, char (*str)[5])
 {
 	//str is a pointer which points to an array of 5
 	for (int i = 0; i < n; i++)
@@ -44,7 +45,7 @@ void multiArrayFunc2(int n, char (*str)[5])
 }
 
 
-char visitMultiArray3(char** str, int i, int j, int cols)
+static char visitMultiArray3(char** str, int i, int j, int cols)
 {
 	//return str[i][j];
 	return *((char*)str + i * cols + j);
@@ -53,7 +54,7 @@ char visitMultiArray3(char** str, int i, int j, int cols)
 /* Visit the str like visitting a one-dimensional array.
    The array in constant memory /str[0]-str[1]-../
 */
-void multiArrayFunc3(int n, char** str, int cols)
+static void multiArrayFunc3(int n, char** str, int cols)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -63,7 +64,7 @@ void multiArrayFunc3(int n, char** str, int cols)
 }
 
 
-void multiArrayFunc4(int n, char* str[], int cols)
+static void multiArrayFunc4(int n, char* str[], int cols)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -73,14 +74,13 @@ void multiArrayFunc4(int n, char* str[], int cols)
 }
 
 
-void multiArrayStructFunc(multiArrayStruct** arr, int n)
+static void multiArrayStructFunc(multiArrayStruct** arr, int n)
 {
 	printf("multiArrayStructFunc: arr[0]->a: %d\n", arr[0]->a);
 	printf("multiArrayStructFunc: arr[0]->ch: %c\n", arr[0]->ch);
 	printf("multiArrayStructFunc: arr[1]->a: %d\n", arr[1]->a);
 	printf("multiArrayStructFunc: arr[1]->ch: %c\n", arr[1]->ch);
 }
-
 
 void runMultiArray()
 {
@@ -115,5 +115,7 @@ void runMultiArray()
 	struct node_t node;
 	node.info.internal.left = 0;
 	node.info.internal.right = 0;
+
+}
 
 }

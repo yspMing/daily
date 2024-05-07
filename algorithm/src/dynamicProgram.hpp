@@ -1,7 +1,9 @@
 #pragma once
 #include <math.h>
 
-class Solution {
+namespace algorithm{
+
+class DP {
 public:
 	int solution = 0;
 	int findPaths(int m, int n, int N, int i, int j) {
@@ -48,3 +50,5 @@ public:
 		}
 	}
 };
+
+}

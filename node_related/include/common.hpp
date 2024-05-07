@@ -1,5 +1,9 @@
-#pragma once
-#include<iostream>
+#ifndef _NODE_COMMON_H_
+#define _NODE_COMMON_H_
+
+#include <iostream>
+
+namespace node_related{
 
 typedef struct listNode {
 	int val;
@@ -7,7 +11,7 @@ typedef struct listNode {
 	listNode(int x = 0) :val(x), next(nullptr) {}
 }listNode;
 
-listNode* constructLinkedList(int* arr, int length)
+inline listNode* constructLinkedList(int* arr, int length)
 {
 	if (length < 1)
 		return nullptr;
@@ -22,7 +26,7 @@ listNode* constructLinkedList(int* arr, int length)
 	return head;
 }
 
-void destroyLinkedList(listNode* listHead)
+inline void destroyLinkedList(listNode* listHead)
 {
 	listNode* curr = listHead;
 	int count = 0;
@@ -36,7 +40,7 @@ void destroyLinkedList(listNode* listHead)
 	std::cout << "destroy a linked list of " << count << " nodes." << std::endl;
 }
 
-void printLinkedList(listNode* listHead)
+inline void printLinkedList(listNode* listHead)
 {
 	listNode* curr = listHead;
 	while (nullptr != curr)
@@ -46,3 +50,7 @@ void printLinkedList(listNode* listHead)
 	}
 	std::cout << "end."<<std::endl;
 }
+
+}
+
+#endif

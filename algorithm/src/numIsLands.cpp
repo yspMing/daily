@@ -1,8 +1,9 @@
-#pragma once
 #include<vector>
 #include<iostream>
 
 using std::vector;
+
+namespace algorithm{
 
 static void fillWater(vector<vector<int>>& grid, int i, int j)
 {
@@ -20,7 +21,7 @@ static void fillWater(vector<vector<int>>& grid, int i, int j)
     fillWater(grid, i, j + 1);
 }
 
-int numIsLands(vector<vector<int>>& grid)
+static int numIsLands(vector<vector<int>>& grid)
 {
     int m = grid.size();
     if (m < 1) {
@@ -60,4 +61,6 @@ void runNumIslands()
     vec.push_back(v4);
 
     std::cout << "numner of islands: "<<numIsLands(vec)<<std::endl;
+}
+
 }

@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <cstring>
 
-int runFgets()
+namespace basic{
+
+static int runFgets()
 {
 	const char* ptr = "Linux";
 	printf("size of ptr: %ld\n", sizeof(ptr));
@@ -19,12 +21,12 @@ int runFgets()
 	return 0;
 }
 
-int var_ele(long n, int A[][10], long i, long j)
+static int var_ele(long n, int A[][10], long i, long j)
 {
 	return A[i][j];
 }
 
-int runScanf()
+static int runScanf()
 {
 	const int wordCount = 10;
 	char myChar[wordCount];
@@ -35,4 +37,6 @@ void runFileInOut()
 {
 	printf("=======>runFetgs()\n");
 	//runFgets();
+}
+
 }

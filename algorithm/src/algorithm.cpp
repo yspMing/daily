@@ -1,17 +1,10 @@
 #include <iostream>
-#include "countAndSay.hpp"
-#include "dynamicProgram.hpp"
-#include "sortedArray.hpp"
-#include "strSplit.hpp"
-#include "threadCycle.hpp"
-#include "singleBridge.hpp"
-#include "maxBitString.hpp"
-#include "fishTravel.hpp"
-#include "numIsLands.hpp"
+#include "inner.h"
 
 
 void RUN_ALGORITHM()
 {
+	using namespace algorithm;
 	/*
 	Solution solver;
 	int ans = solver.findPaths(2, 2, 2, 0, 0);
@@ -20,9 +13,11 @@ void RUN_ALGORITHM()
 
 	//test_sorted_array();
 
-	//mainThreadCycleFun();
+    //std::cout << "****************runDequeThread********************" << std::endl;
+	//runDequeThread();
 
-	//mainThreadCycleFun();
+    std::cout << "****************mainThreadCycleFun********************" << std::endl;
+	mainThreadCycleFun();
 
 	//runSingleBridge();
 
@@ -30,8 +25,8 @@ void RUN_ALGORITHM()
 
 	//runMiniFishSpan();
 
+	std::cout << "****************runNumIslands************************" << std::endl;
 	runNumIslands();
-
 
 	return;
 }

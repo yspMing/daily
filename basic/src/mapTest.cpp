@@ -1,8 +1,8 @@
-#pragma once
-
 #include<map>
 #include<unordered_map>
 #include<iostream>
+
+namespace basic{
 
 int map_test()
 {
@@ -57,4 +57,6 @@ int unordered_map_test()
 	std::cout << "mymap count e: " << count_e << "\n";
 
 	return 0;
+}
+
 }

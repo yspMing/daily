@@ -1,9 +1,10 @@
-#pragma once
-
 #include <stdlib.h>
 #include <string.h>
 #include <algorithm>
+#include <iostream>
 using std::cout;
+
+namespace algorithm{
 
 /*
   A frog is goning to jump across the bridge, and there is some stones on the bridge,
@@ -11,7 +12,7 @@ using std::cout;
   Output the minimum number of stones the frog will step at if it crosses the bridge.
   https://blog.csdn.net/weixin_45541762/article/details/130674444
 */
-int singleBridge(
+static int singleBridge(
 	int bridgeLength,
 	int minStep,
 	int maxStep,
@@ -49,4 +50,6 @@ void runSingleBridge()
 	std::cout << "=======>runSingleBridge: ";
 	int ans = singleBridge(L, S, T, M, stones);
 	std::cout << ans;
+}
+
 }

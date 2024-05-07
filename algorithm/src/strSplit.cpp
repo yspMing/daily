@@ -1,9 +1,9 @@
-#pragma once
-
 #include <iostream>
 #include <string.h>
 #include <vector>
 using std::string;
+
+namespace algorithm{
 /*
 void strcpy_s_test()
 {
@@ -54,4 +54,6 @@ void strtok_test()
 		std::cout << *it << "\n";
 	}
 	return;
+}
+
 }

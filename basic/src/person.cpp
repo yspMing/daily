@@ -1,8 +1,9 @@
-#pragma once
 #include<iostream>
 #include<string>
 
 using std::string;
+
+namespace basic{
 
 class person
 {
@@ -74,4 +75,6 @@ void personTest()
 	s.print(0);
 	std::cout << std::endl;
 	s.person::print();
+}
+
 }

@@ -1,24 +1,26 @@
-#pragma once
+#include <iostream>
+
+namespace algorithm{
 
 /*
- * #Ðý×ªÊý×é²éÕÒ#
- *Ô­Ê¼ÅÅÐòÊý×éÔÚÄ³Ò»¸öµØ·½¿ÉÄÜ·¢ÉúÁËÐý×ª
+ * #ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½#
+ *Ô­Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³Ò»ï¿½ï¿½ï¿½Ø·ï¿½ï¿½ï¿½ï¿½Ü·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ª
  *[1,2,3,4,5] -->  [3,4,5,1,2]
- *ÔÚÕâÑùÒ»¸öÊý×éÖÐ²éÕÒÄ³¸öÔªËØÊÇ·ñ´æÔÚ
+ *ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½Ä³ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
 */
-int search_in_rotated_sorted_array(int* nums, int numsSize, int target);
+static int search_in_rotated_sorted_array(int* nums, int numsSize, int target);
 
 /*
- * #ÔÚÅÅÐòÊý×éÖÐ²éÕÒÔªËØµÄµÚÒ»¸öºÍ×îºóÒ»¸öÎ»ÖÃ#
- *¸ø¶¨·ÇµÝ¼õÊý×éºÍÄ¿±êÖµ£¬ÕÒ³öÄ¿±êÖµµÄÆðÖ¹Î»ÖÃ×ø±ê
+ * #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½Ôªï¿½ØµÄµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î»ï¿½ï¿½#
+ *ï¿½ï¿½ï¿½ï¿½ï¿½ÇµÝ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Öµï¿½ï¿½ï¿½Ò³ï¿½Ä¿ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ö¹Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  *nums-->[5,7,7,8,8,10], target-->7
- *·µ»Ø[1,2]
+ *ï¿½ï¿½ï¿½ï¿½[1,2]
 */
-int* find_first_and_last_position_of_element_in_sorted_array(int* nums, int numsSize, int target, int* returnSize);
+static int* find_first_and_last_position_of_element_in_sorted_array(int* nums, int numsSize, int target, int* returnSize);
 
 
-/* ÊµÏÖº¯Êý */
-int search_in_rotated_sorted_array(int* nums, int numsSize, int target)
+/* Êµï¿½Öºï¿½ï¿½ï¿½ */
+static int search_in_rotated_sorted_array(int* nums, int numsSize, int target)
 {
     int left = 0;
     int right = numsSize -1;
@@ -70,8 +72,8 @@ int search_in_rotated_sorted_array(int* nums, int numsSize, int target)
 }
 
 
-/* ÊµÏÖº¯Êý */
-int find_in_left(int* nums, int target,int left, int right)
+/* Êµï¿½Öºï¿½ï¿½ï¿½ */
+static int find_in_left(int* nums, int target,int left, int right)
 {
     if (nums[left] == target)
         return left;
@@ -99,7 +101,7 @@ int find_in_left(int* nums, int target,int left, int right)
     }
     return start;
 }
-int find_in_right(int* nums, int target, int left, int right)
+static int find_in_right(int* nums, int target, int left, int right)
 {
     if (nums[right] == target)
         return right;
@@ -128,7 +130,7 @@ int find_in_right(int* nums, int target, int left, int right)
     return end;
 }
 
-int* find_first_and_last_position_of_element_in_sorted_array(int* nums, int numsSize, int target, int* returnSize)
+static int* find_first_and_last_position_of_element_in_sorted_array(int* nums, int numsSize, int target, int* returnSize)
 {
     int* ret = (int*)malloc(2 * sizeof(int));
     ret[0] = -1;
@@ -168,5 +170,7 @@ void test_sorted_array()
     int ans_size;
     int* ans = find_first_and_last_position_of_element_in_sorted_array(arr, 6, 7, &ans_size);
     std::cout << "target " << 7 << " in [ " << ans[0] << ", " << ans[1] << " ]" << std::endl;
+
+}
 
 }

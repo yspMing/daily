@@ -1,8 +1,8 @@
-#pragma once
-
-#include<iostream>
-#include"common.hpp"
+#include <iostream>
+#include "common.hpp"
 using namespace std;
+
+namespace node_related{
 
 // Function to reverse a linked list and return the new head
 listNode* reverseLinkedList(listNode* head) {
@@ -81,4 +81,6 @@ int mainGPT() {
     // Free the allocated memory (not shown here, but should be done in real scenarios)
     destroyLinkedList(newHead);
     return 0;
+}
+
 }

@@ -1,6 +1,9 @@
-#pragma once
+#include <iostream>
+#include <string.h>
 
-int miniFishSpan(int n, int* fishPrice, int* savePrice)
+namespace algorithm{
+
+static int miniFishSpan(int n, int* fishPrice, int* savePrice)
 {
     int* DP = (int*)malloc(n * sizeof(int));
     memset(DP, 0, n * sizeof(int));
@@ -22,7 +25,7 @@ int miniFishSpan(int n, int* fishPrice, int* savePrice)
     return DP[n - 1];
 }
 
-int miniFishSpan2(int n, int* fishPrice, int* savePrice)
+static int miniFishSpan2(int n, int* fishPrice, int* savePrice)
 {
     int cost = fishPrice[0];
 
@@ -41,7 +44,7 @@ int miniFishSpan2(int n, int* fishPrice, int* savePrice)
     return cost;
 }
 
-int miniFishSpan3(int n, int* fishPrice, int* savePrice) {
+static int miniFishSpan3(int n, int* fishPrice, int* savePrice) {
     int min=100000,t=0;
     for(int i=0;i<n;i++){
         if(min> fishPrice[i])
@@ -62,4 +65,6 @@ void runMiniFishSpan()
     int savePrice[5] = { 3,1,2,3,5 };
     int ans = miniFishSpan2(5, fishPrice, savePrice);
     std::cout << "miniFishSpan: " << ans << std::endl;
+}
+
 }
