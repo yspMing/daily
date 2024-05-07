@@ -1,14 +1,17 @@
 #pragma once
 
 #include <stdio.h>
-typedef enum {N_LEAF, N_INTERNAL} nodetype_t;
+typedef enum {
+	N_LEAF, 
+	N_INTERNAL
+} nodetype_t;
 
 typedef struct {
 	int a;
 	char ch;
 }multiArrayStruct;
 
-typedef struct node_t{
+struct node_t{
 	nodetype_t type;
 	union 
 	{

@@ -48,7 +48,7 @@ int numIsLands(vector<vector<int>>& grid)
 
 void runNumIslands()
 {
-    std::cout << "********runNumIslands*****" << std::endl;
+    std::cout << "=======>runNumIslands" << std::endl;
     vector<vector<int> > vec;
     vector<int> v1 = { 1,1,0,0,0 };
     vector<int> v2 = { 1,1,0,0,0 };
@@ -59,5 +59,5 @@ void runNumIslands()
     vec.push_back(v3);
     vec.push_back(v4);
 
-    std::cout << numIsLands(vec);
+    std::cout << "numner of islands: "<<numIsLands(vec)<<std::endl;
 }

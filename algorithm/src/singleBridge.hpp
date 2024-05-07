@@ -31,7 +31,7 @@ int singleBridge(
 		m = stoneNumber;
 		for (int j = minStep; j <= maxStep; j++)
 		{
-			m = min(dp[i + j], m);
+			m = std::min(dp[i + j], m);
 		}
 		dp[i] += m;
 	}

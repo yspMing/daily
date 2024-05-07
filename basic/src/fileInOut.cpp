@@ -3,15 +3,15 @@
 
 int runFgets()
 {
-	char* ptr = "Linux";
-	printf("size of ptr: %d\n", sizeof(ptr));
+	const char* ptr = "Linux";
+	printf("size of ptr: %ld\n", sizeof(ptr));
 
 	//About fgets buffer leak problem
 	//see https://zhuanlan.zhihu.com/p/522935497
 	char a[10] = { 0 };
 	printf("Test fgets function, input a string(longest length 9): ");
 	fgets(a, 10, stdin);
-	printf("length: %d\n", strlen(a));
+	printf("length: %ld\n", strlen(a));
 	for (int i = 0; i < strlen(a); i++)
 	{
 		printf("%c", a[i]);
